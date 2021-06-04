@@ -28,6 +28,36 @@ var $table = $('#table');
 </script> --}}
 
 <script src="/js/jira-activity.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<html>
+<head>
+    <title>Table Data Addition</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-table.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap-table.js"></script>
+</head>
+<body>
+    <div class="container">
+        <table id="table"
+        data-toggle="table"
+               data-toolbar="#toolbar"
+               data-height="460">
+        <thead>
+            <tr>
+                <th data-field="id">Item ID</th>
+                <th data-field="name">Item Name</th>
+                <th data-field="price">Item Price</th>
+            </tr>
+        </thead>
+    </table>
+    </div>
+</body>
+</html>
  
 </body>
 

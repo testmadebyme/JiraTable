@@ -2,27 +2,48 @@ $(document).ready(function () {
     alert("Hello World");
 });
 
-var $table = $('#table')
+const $table = $('#table');
 
-$(function () {
+AP.request('https://bymetest.atlassian.net/rest/api/3/issuetype', {
+    success: function(responseText){
+        var mydata = JSON.parse(responseText);
 
+        $(function () {
+            $('#table').bootstrapTable({
+                data: mydata
+            });
+            console.log(mydata);
+        });
 
-
-    var data = [];
-    $.get('https://bymetest.atlassian.net/rest/api/3/issuetype').done(function (response) {
-        responseData = response['auszug'];
-
-        // Here you have to flat the array
-        Object.keys(responseData).forEach(function (key) {
-
-            var value = responseData[key];
-            data.push(value);
-        })
-        $table.bootstrapTable({ data: data })
-    })
-
-
+    }
 });
+
+
+
+
+
+
+
+
+// $(function () {
+
+
+
+//     var data = [];
+//     $.get('https://bymetest.atlassian.net/rest/api/3/issuetype').done(function (response) {
+//         responseData = response['auszug'];
+
+//         // Here you have to flat the array
+//         Object.keys(responseData).forEach(function (key) {
+
+//             var value = responseData[key];
+//             data.push(value);
+//         })
+//         $table.bootstrapTable({ data: data })
+//     })
+
+
+// });
 
 
 

@@ -36,6 +36,10 @@ module.exports = function (app, addon) {
         res.render("main-page")
     });
 
+    // app.get('/main-page', addon.authenticate(), function(req, res) {
+    //     res.render('main-page', { title: "Jira activity" });
+    // });
+
     app.post('/main-page', addon.checkValidToken(), async function (req, res) {
 
     });
@@ -58,9 +62,7 @@ module.exports = function (app, addon) {
         }
     }
 
-    app.get('/activity', addon.authenticate(), function(req, res) {
-        res.render('activity', { title: "Jira activity" });
-    });
+
 
 //     const fetch = require('node-fetch');
 
@@ -101,6 +103,9 @@ module.exports = function (app, addon) {
 
 };
 
+// https://bymetest.atlassian.net/rest/api/2/search?jql=project=%27OLGA%27
+//https://testbyme.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g
+//https://your-domain.atlassian.net/rest/api/3/search?jql=assignee+in+%28currentUser%28%29%29+and+resolution+is+empty
 
 
 
