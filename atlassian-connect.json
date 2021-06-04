@@ -7,10 +7,10 @@
     "name": "SaaSJet",
     "url": "https://saasjet.com"
   },
-  "baseUrl": "https://smth.heroku.com", /** <=== INSERT YOUR HEROKU APP URL. Delete this comment */
+  "baseUrl": "https://plugtestjira.herokuapp.com", /** <=== INSERT YOUR HEROKU APP URL. Delete this comment */
   "links": {
-    "self": "https://85eba50fde7e.ngrok.io/atlassian-connect.json",
-    "homepage": "https://85eba50fde7e.ngrok.io/atlassian-connect.json"
+    "self": "https://5b4f0fca4d1d.ngrok.io/atlassian-connect.json",
+    "homepage": "https://5b4f0fca4d1d.ngrok.io/atlassian-connect.json"
   },
   "authentication": {
     "type": "jwt"
