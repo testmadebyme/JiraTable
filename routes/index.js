@@ -58,56 +58,41 @@ module.exports = function (app, addon) {
         }
     }
 
-    const fetch = require('node-fetch');
+//     const fetch = require('node-fetch');
 
-    const issue = [];
+//     const issue = [];
 
-fetch('https://bymetest.atlassian.net/rest/api/3/issue/DESK-11', {
-  method: 'GET',
-  headers: {
-    'Authorization': `Basic ${Buffer.from(
-      'ola.sheremeta@gmail.com:xlXAC0FJWh2cnem4MJOe786A'
-    ).toString('base64')}`,
-    'Accept': 'application/json'
-  }
-})
-  .then(response => {
-    console.log(
-      `Response: ${response.status} ${response.statusText}`
-      //console.log("Responce Test Saas")
-    );
-    return response.text();
-  })
-//   .then(data => {
-//       //console.log(JSON.parse(data).fields.assignee);
-//        const html = JSON.parse(data).fields.assignee.forEach(issue => {
-//            return `<p>${issue.emailAddress + issue.displayName}</p>`;
-          
-//       }).join('');
-//        console.log(html);
-//       //console.log(html[issue.id]);
+// fetch('https://bymetest.atlassian.net/rest/api/3/issue/DESK-11', {
+//   method: 'GET',
+//   headers: {
+//     'Authorization': `Basic ${Buffer.from(
+//       'ola.sheremeta@gmail.com:xlXAC0FJWh2cnem4MJOe786A'
+//     ).toString('base64')}`,
+//     'Accept': 'application/json'
+//   }
+// })
+//   .then(response => {
+//     console.log(
+//       `Response: ${response.status} ${response.statusText}`
+//       //console.log("Responce Test Saas")
+//     );
+//     return response.text();
 //   })
-   .then(data => { 
-//       //console.log(JSON.parse(data));
-//       //for (i = 0; i < text.length; i++) {
-//     // console.log(text.name[0]);
-//     //}
-    let obj = JSON.parse(data).fields.assignee;
-    function printValues(obj) {
-        for(var k in obj) {
-            if(obj[k] instanceof Object) {
-                printValues(obj[k]);
-            } else {
-                console.log((obj[k]));
-            };
-        }
-    };
+//    .then(data => { 
+//     let obj = JSON.parse(data).fields.assignee;
+//     function printValues(obj) {
+//         for(var k in obj) {
+//             if(obj[k] instanceof Object) {
+//                 printValues(obj[k]);
+//             } else {
+//                 console.log((obj[k]));
+//             };
+//         }
+//     };
     
-    // Printing all the values from the resulting object
-    console.log(printValues(obj));
-  })
-   .catch(err => console.error(err));
-
-    
+//     // Printing all the values from the resulting object
+//     console.log(printValues(obj));
+//   })
+//    .catch(err => console.error(err));
 
 };
