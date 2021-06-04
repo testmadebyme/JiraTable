@@ -9,8 +9,8 @@
   },
   "baseUrl": "https://plugtestjira.herokuapp.com", /** <=== INSERT YOUR HEROKU APP URL. Delete this comment */
   "links": {
-    "self": "https://e9dbcd139d5a.ngrok.io/atlassian-connect.json",
-    "homepage": "https://e9dbcd139d5a.ngrok.io/atlassian-connect.json"
+    "self": "https://909a3545e668.ngrok.io/atlassian-connect.json",
+    "homepage": "https://909a3545e668.ngrok.io/atlassian-connect.json"
   },
   "authentication": {
     "type": "jwt"
