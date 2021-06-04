@@ -21,17 +21,14 @@ var $table = $('#table');
 </head>
 
 <body>
-    <div class="container">
-        <table id="table" data-height="460">
-            <thead>
-                <tr>
-                    <th data-field="id">Item ID</th>
-                    <th data-field="name">Item Name</th>
-                    <th data-field="description">Description</th>
-                </tr>
-            </thead>
-        </table>
-    </div>
+<script> 
+    let url = `https://bymetest.atlassian.net/rest/api/3/issuetype/10004`;
+    fetch(url).then((res)=> { return res.json();
+    }).then((data)=> console.log(data))
+</script>
+
+
+ 
 </body>
 
 </html>
