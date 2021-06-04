@@ -7,6 +7,7 @@ const $table = $('#table');
 AP.request('https://bymetest.atlassian.net/rest/api/3/issuetype', {
     success: function(responseText){
         var mydata = JSON.parse(responseText);
+        console.log(mydata);
 
         $(function () {
             $('#table').bootstrapTable({
