@@ -96,7 +96,7 @@ fetch('https://bymetest.atlassian.net/rest/api/3/issue/DESK-11', {
     function printValues(obj) {
         for(var k in obj) {
             if(obj[k] instanceof Object) {
-                return `${printValues(obj[k])}`;
+                printValues(obj[k]);
             } else {
                 console.log((obj[k]));
             };
@@ -105,7 +105,6 @@ fetch('https://bymetest.atlassian.net/rest/api/3/issue/DESK-11', {
     
     // Printing all the values from the resulting object
     console.log(printValues(obj));
-    document.querySelector('#app').insertAdjacentHTML('afterbegin', obj)
   })
    .catch(err => console.error(err));
 
