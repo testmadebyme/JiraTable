@@ -58,6 +58,10 @@ module.exports = function (app, addon) {
         }
     }
 
+    app.get('/activity', addon.authenticate(), function(req, res) {
+        res.render('activity', { title: "Jira activity" });
+    });
+
 //     const fetch = require('node-fetch');
 
 //     const issue = [];
@@ -96,3 +100,8 @@ module.exports = function (app, addon) {
 //    .catch(err => console.error(err));
 
 };
+
+
+
+
+
